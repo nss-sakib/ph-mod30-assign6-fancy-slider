@@ -6,6 +6,13 @@
   position: relative;
 }
 
+#back-button{
+  font-size: 250%;
+  color:gray;
+  background-color: white;
+  border: none;
+}
+
 .gallery-header {
   display: none;
 }

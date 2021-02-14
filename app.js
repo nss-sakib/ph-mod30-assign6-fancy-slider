@@ -41,13 +41,12 @@ let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
   let item = sliders.indexOf(img);
+  element.classList.toggle('added');
   if (item === -1) {
     sliders.push(img);
-    element.classList.add('added');
   }
   else {
     sliders.splice(item, 1);
-    element.classList.remove('added');
   }
 }
 
@@ -141,7 +140,7 @@ const backToGallery = () => {
   sliders.length = 0;
   const selectedImages = document.querySelectorAll('.added');
   selectedImages.forEach(image => {
-    image.classList.remove('added');
+    image.classList.toggle('added');
   })
   main.style.display = 'none';
   imagesArea.style.display = 'block';
